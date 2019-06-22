@@ -1,0 +1,149 @@
+1548290659865	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.oZ7sWyGTAsv5"
+1548290668808	Marionette	INFO	Listening on port 41315
+1548290668959	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 2: unreachable code after return statement
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 4: unreachable code after return statement
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 5: unreachable code after return statement
+1548290682832	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.RLSRJKKyqU1z"
+1548290689399	Marionette	INFO	Listening on port 42727
+1548290689504	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548290690742	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.64PLZj31dxmt"
+1548290698345	Marionette	INFO	Listening on port 38729
+1548290698466	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: chrome://browser/content/urlbarBindings.xml, line 2709: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIAutoCompleteController.getStyleAt]
+ExceptionHandler::GenerateDump cloned child 24365
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+ExceptionHandler::GenerateDump cloned child ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+24366
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x300067,name=PContent::Msg_SuspendInputEventQueue) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x300065,name=PContent::Msg_FlushInputEventQueue) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x300066,name=PContent::Msg_ResumeInputEventQueue) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x300045,name=PContent::Msg_Shutdown) Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+[Parent 24032, Gecko_IOThread] WARNING: pipe error (93): Connection reset by peer: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+ExceptionHandler::GenerateDump cloned child ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+24368
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x4C0018,name=PHttpChannel::Msg_DeleteSelf) Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+
+###!!! [Parent][RunMessage] Error: Channel error: cannot send/recv
+
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+1548290868128	Marionette	INFO	Stopped listening on port 38729
+1548290898185	Marionette	INFO	Stopped listening on port 41315
+1548290902367	Marionette	INFO	Stopped listening on port 42727
+1548290927792	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.o1Q631glmM7N"
+1548290939408	Marionette	INFO	Listening on port 43887
+1548290939480	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 2: unreachable code after return statement
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 4: unreachable code after return statement
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 5: unreachable code after return statement
+1548290956265	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.L7T8iQk2W2P0"
+1548290962217	Marionette	INFO	Listening on port 46161
+1548290962339	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548290963505	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.iMlBdY3PvY58"
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:721:13
+
+1548290973720	Marionette	INFO	Listening on port 38629
+1548290973797	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548291007120	Marionette	INFO	Stopped listening on port 38629
+[Parent 24697, Gecko_IOThread] WARNING: pipe error (83): Connection reset by peer: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+1548291009592	Marionette	INFO	Stopped listening on port 46161
+1548291011299	Marionette	INFO	Stopped listening on port 43887
+1548291020473	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.cFTNquNQq5iq"
+1548291027873	Marionette	INFO	Listening on port 38547
+1548291027962	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 2: unreachable code after return statement
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 4: unreachable code after return statement
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 5: unreachable code after return statement
+1548291038254	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.UPz4lCZPeYVK"
+1548291045994	Marionette	INFO	Listening on port 46171
+1548291046091	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548291047227	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Lx3V6WdYfwzq"
+1548291058899	Marionette	INFO	Listening on port 39515
+1548291058995	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548291311432	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.6Cf3bqmGWIuJ"
+1548291318455	Marionette	INFO	Listening on port 40751
+1548291318577	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 2: unreachable code after return statement
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 4: unreachable code after return statement
+JavaScript warning: https://allevents.in/scripts/common.js?v=1547723420, line 5: unreachable code after return statement
+1548291336136	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ZKRtxC7XDr1g"
+1548291347582	Marionette	INFO	Listening on port 40543
+1548291347625	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548291347972	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.MhHopJaoXfpx"
+1548291372392	Marionette	INFO	Listening on port 44145
+1548291372723	Marionette	WARN	TLS certificate errors will be ignored for this session
+1548291396876	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.e3AIGtUIrAK6"
+[Parent 27149, Gecko_IOThread] WARNING: pipe error: Broken pipe: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 729
+[Parent 27149, Gecko_IOThread] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 22
+[Parent 27149, Gecko_IOThread] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 22
+[Parent 27149, Gecko_IOThread] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 22
+[Parent 27149, Gecko_IOThread] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 22
+[Parent 27149, Gecko_IOThread] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 22
+[Parent 27149, Gecko_IOThread] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 22
+[Parent 27149, Gecko_IOThread] WARNING: FileDescriptorSet destroyed with unconsumed descriptors: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/file_descriptor_set_posix.cc, line 22
+[Parent 27149, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+[Parent 27149, Gecko_IOThread] WARNING: pipe error (97): Connection reset by peer: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+[Parent 27149, Gecko_IOThread] WARNING: pipe error (99): Connection reset by peer: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+[Parent 27149, Gecko_IOThread] WARNING: pipe error (100): Connection reset by peer: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+[Parent 27149, Gecko_IOThread] WARNING: pipe error (106): Connection reset by peer: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+[Child 27040, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-4VfQCB/firefox-63.0+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+1548291471284	Marionette	INFO	Stopped listening on port 46171
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x4C000D,name=PHttpChannel::Msg_RemoveCorsPreflightCacheEntry) Channel closing: too late to send/recv, messages will be lost
+
+1548291477904	Marionette	INFO	Stopped listening on port 39515
+1548291480149	Marionette	INFO	Stopped listening on port 38547

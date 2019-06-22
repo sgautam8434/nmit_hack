@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>parser</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src = "jquery-csv.js"></script>
+</head>
+<body>
+<!--
+<form class="form-inline">
+<div class="form-group">
+  <label for="files">Upload a CSV formatted file:</label>
+  <input type="file" id="files"  class="form-control" accept=".csv" required />
+</div>
+<div class="form-group">
+ <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+ </div>
+
+</form>
+-->
+<script>
+$(document).ready(function(){
+var data;
+    $.ajax({
+      type: "GET",  
+      url: "links1.csv",
+      dataType: "text",       
+      success: function(response)  
+      {
+        data = $.csv.toArrays(response);
+        console.log(data);
+        generateHtmlTable(data);
+      }   
+    });
+    function generateHtmlTable(data) {
+    var html = '<table  class="table table-condensed table-hover table-striped">';
+
+      if(typeof(data[0]) === 'undefined') {
+        return null;
+      } else {
+        $.each(data, function( index, row ) {
+          //bind header
+          if(index == 0) {
+            html += '<thead>';
+            html += '<tr>';
+            $.each(row, function( index, colData ) {
+                html += '<th>';
+                html += colData;
+                html += '</th>';
+            });
+            html += '</tr>';
+            html += '</thead>';
+            html += '<tbody>';
+          } else {
+            html += '<tr>';
+            $.each(row, function( index, colData ) {
+                html += '<td>';
+                html += colData;
+                html += '</td>';
+            });
+            html += '</tr>';
+          }
+        });
+        html += '</tbody>';
+        html += '</table>';
+        $('body').append(html);
+      }
+    }   
+});
+</script>
+</body>
+</html>
