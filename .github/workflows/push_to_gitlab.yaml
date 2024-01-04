@@ -24,7 +24,7 @@ jobs:
           GITLAB_PAT: glpat-opFVoYHmjqbshYzdZBGr
         run: |
           echo "Setting up GitLab remote..."
-          git remote add gitlab https://oauth2:${GITLAB_PAT}@gitlab.com/yourusername/yourrepo.git
+          git remote add gitlab https://oauth2:${GITLAB_PAT}@gitlab.com/siddhantgautam/nmit_hack.git
           echo "Remote GitLab repository added"
           
           echo "Pushing code to GitLab..."
