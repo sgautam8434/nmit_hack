@@ -41,3 +41,18 @@ jobs:
           git push gitlab HEAD:push_to_gitlab --force
           echo "Code has been pushed to the master branch in the GitLab repository."
 
+      - name: Extract Tag Name
+        id: tag_name
+        run: |
+          TAG_NAME=${GITHUB_REF#refs/tags/}
+          echo "Extracted tag name: $TAG_NAME"
+          echo "::set-output name=tag::$TAG_NAME"
+
+      - name: Create and Push Tag to GitLab
+        env:
+          TAG_NAME: ${{ steps.tag_name.outputs.tag }}
+        run: |
+          echo "Creating and pushing tag $TAG_NAME to GitLab..."
+          git tag $TAG_NAME
+          git push gitlab $TAG_NAME
+          echo "Tag $TAG_NAME has been pushed to GitLab."
