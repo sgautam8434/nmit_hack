@@ -35,7 +35,7 @@ jobs:
           echo "Remote GitLab repository added"
           
           echo "Pulling latest changes from GitLab..."
-          git pull gitlab main
+          git pull --rebase gitlab main
           echo "Latest changes pulled from GitLab"
 
       - name: Push to GitLab Master Branch
