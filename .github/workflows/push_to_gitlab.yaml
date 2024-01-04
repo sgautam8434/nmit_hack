@@ -1,0 +1,37 @@
+name: Push Release to GitLab
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  push_to_gitlab:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        run: echo "Repository has been checked out"
+
+      - name: Set up Git identity
+        run: |
+          git config --global user.name 'Siddhant Gautam'
+          git config --global user.email 'sgautam8434@gmail.com'
+          echo "Git identity set up with name 'Siddhant Gautam' and email 'sgautam8434@gmail.com'"
+
+      - name: Login to GitLab
+        env:
+          GITLAB_PAT: glpat-opFVoYHmjqbshYzdZBGr
+        run: |
+          echo "Logging into GitLab..."
+          git remote add gitlab https://oauth2:glpat-opFVoYHmjqbshYzdZBGr@gitlab.com/siddhantgautam/nmit_hack.git
+          echo "Remote GitLab repository added"
+
+      - name: Push to GitLab
+        run: |
+          echo "Pushing code to GitLab..."
+          git push gitlab HEAD:main
+          echo "Code has been pushed to GitLab repository"
+
+
