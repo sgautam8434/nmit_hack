@@ -19,17 +19,57 @@ jobs:
           git config --global user.email 'sgautam8434@gmail.com'
           echo "Git identity set up with name 'Your Name' and email 'your-email@example.com'"
 
-      - name: Push to GitLab
+      - name: Determine Branch Name
+        id: branch_name
+        run: |
+          BRANCH_NAME="${GITHUB_REF#refs/tags/}"
+          echo "Branch name is $BRANCH_NAME"
+          echo "::set-output name=branch::$BRANCH_NAME"
+
+      - name: Setup GitLab Remote
         env:
           GITLAB_PAT: glpat-opFVoYHmjqbshYzdZBGr
         run: |
           echo "Setting up GitLab remote..."
-          git remote add gitlab https://oauth2:${GITLAB_PAT}@gitlab.com/siddhantgautam/nmit_hack.git
+          git remote add gitlab https://oauth2:${GITLAB_PAT}@gitlab.com/yourusername/yourrepo.git
           echo "Remote GitLab repository added"
-          
-          echo "Pushing code to GitLab..."
-          git push gitlab HEAD:main
-          echo "Code has been pushed to GitLab repository"
 
+      - name: Check if Branch Exists in GitLab
+        id: check_branch
+        env:
+          BRANCH_NAME: ${{ steps.branch_name.outputs.branch }}
+        run: |
+          echo "Checking if $BRANCH_NAME exists in GitLab..."
+          if git ls-remote --heads gitlab $BRANCH_NAME | grep -q $BRANCH_NAME; then
+            echo "::set-output name=exists::true"
+            echo "Branch $BRANCH_NAME exists in GitLab."
+          else
+            echo "::set-output name=exists::false"
+            echo "Branch $BRANCH_NAME does not exist in GitLab, it will be created."
 
+      - name: Create Branch in GitLab if Not Exists
+        if: steps.check_branch.outputs.exists == 'false'
+        env:
+          BRANCH_NAME: ${{ steps.branch_name.outputs.branch }}
+        run: |
+          echo "Creating branch $BRANCH_NAME in GitLab..."
+          git branch $BRANCH_NAME
+          git push gitlab $BRANCH_NAME
+          echo "Branch $BRANCH_NAME created in GitLab."
 
+      - name: Pull Changes from GitLab
+        if: steps.check_branch.outputs.exists == 'true'
+        env:
+          BRANCH_NAME: ${{ steps.branch_name.outputs.branch }}
+        run: |
+          echo "Pulling latest changes from GitLab for branch $BRANCH_NAME..."
+          git pull gitlab $BRANCH_NAME
+          echo "Latest changes pulled from GitLab for branch $BRANCH_NAME"
+
+      - name: Push to GitLab
+        env:
+          BRANCH_NAME: ${{ steps.branch_name.outputs.branch }}
+        run: |
+          echo "Pushing code to GitLab for branch $BRANCH_NAME..."
+          git push gitlab HEAD:$BRANCH_NAME
+          echo "Code has been pushed to GitLab repository for branch $BRANCH_NAME"
