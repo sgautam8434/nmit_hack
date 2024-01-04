@@ -15,8 +15,8 @@ jobs:
 
       - name: Set up Git identity
         run: |
-          git config --global user.name 'Your Name'
-          git config --global user.email 'your-email@example.com'
+          git config --global user.name 'Siddhant Gautam'
+          git config --global user.email 'sgautam8434@gmail.com'
           echo "Git identity set up with name 'Your Name' and email 'your-email@example.com'"
 
       - name: Push to GitLab
