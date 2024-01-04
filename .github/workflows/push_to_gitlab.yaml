@@ -37,6 +37,6 @@ jobs:
       - name: Push to GitLab Master Branch
         run: |
           echo "Pushing code to the master branch in GitLab..."
-          git push gitlab HEAD:main --force
+          git push gitlab HEAD:push_to_gitlab --force
           echo "Code has been pushed to the master branch in the GitLab repository."
 
