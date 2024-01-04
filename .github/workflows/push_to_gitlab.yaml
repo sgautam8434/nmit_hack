@@ -23,7 +23,7 @@ jobs:
       - name: Determine Branch Name
         id: branch_name
         run: |
-          BRANCH_NAME="${GITHUB_REF#refs/tags/}"
+          BRANCH_NAME="${GITHUB_REF#refs/branch/}"
           echo "Branch name is $BRANCH_NAME"
           echo "::set-output name=branch::$BRANCH_NAME"
 
