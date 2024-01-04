@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-
+        with:
+          fetch-depth: 0
       - name: Set up Git identity
         run: |
           git config --global user.name 'Siddhant Gautam'
