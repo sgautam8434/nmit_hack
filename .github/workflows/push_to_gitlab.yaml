@@ -18,7 +18,7 @@ jobs:
         run: |
           git config --global user.name 'Siddhant Gautam'
           git config --global user.email 'sgautam8434@gmail.com'
-          echo "Git identity set up with name 'Your Name' and email 'your-email@example.com'"
+          echo "Git identity set up with name 'Siddhant Gautam' and email 'sgautam8434@gmail.com'"
 
       - name: Determine Branch Name
         id: branch_name
